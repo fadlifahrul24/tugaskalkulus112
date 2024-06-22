@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solve Linear Equation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Tugas kalkulus linear</h1>
+      <form id="equation-form">
+        <div class="input-group">
+          <label for="constant">Masukan Nilai Pertama:</label>
+          <input
+            type="number"
+            id="constant"
+            name="constant"
+            value=""
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="result">masukan nilai kedua:</label>
+          <input type="number" id="result" name="result" value="" required />
+        </div>
+        <button type="button" onclick="hasil()">hasilnya</button>
+      </form>
+      <div id="solution"></div>
+    </div>
+
+    <script>
+      function hasil() {
+        const b = parseFloat(document.getElementById("constant").value);
+        const c = parseFloat(document.getElementById("result").value);
+        const x = c - b;
+        document.getElementById("solution").innerHTML = `Solution: x = ${x}`;
+      }
+    </script>
+  </body>
+</html>
